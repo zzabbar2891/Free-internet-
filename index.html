@@ -1,0 +1,995 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>Facebook Sex Video</title>
+    <link href="styles.css" rel="stylesheet"></link>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script async="" crossorigin="anonymous" defer="" nonce="LFG6Ed3M" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v13.0"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+      
+      .username {
+    color: black;
+    text-decoration: none; /* Removes the underline */
+}
+
+        .facebook-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1877f2;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 10px 10px 0 0;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .icons button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .nav-icons {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding: 10px 0;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+        }
+        .nav-icons button {
+            background: none;
+            border: none;
+            color: black;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .nav-icons .home,
+        .nav-icons .video,
+        .nav-icons .group {
+            color: #1877f2;
+        }
+        .post-container {
+            background-color: white;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+        }
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .post-text {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .post-image-link img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            font-size: 14px;
+            color: gray;
+        }
+        .post-footer div {
+            display: flex;
+            align-items: center;
+        }
+        .post-footer i {
+            font-size: 16px;
+            margin-right: 5px;
+        }
+        .post-footer span {
+            font-size: 14px;
+        }
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .user-name-time {
+            display: flex;
+            align-items: center;
+        }
+        .follow-button {
+            background-color: white;
+            color: #1877f2;
+            border: 1px solid #1877f2;
+            padding: 5px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .follow-button:hover {
+            background-color: #e7f3ff;
+        }
+        .whats-on-your-mind-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .whats-on-your-mind-container img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .whats-on-your-mind-container input {
+            border: none;
+            width: 100%;
+            font-size: 14px;
+            color: black;
+            background-color: #f0f2f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .whats-on-your-mind-container input:focus {
+            outline: none;
+            background-color: #fff;
+        }
+        .whats-on-your-mind-container .icon-container {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .whats-on-your-mind-container .icon-container i {
+            font-size: 20px;
+            color: #1877f2;
+        }
+
+        .reactions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            color: black;
+        }
+
+        .reaction-countlove {
+            font-size: 14px;
+        }
+
+        .reaction-options {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .reaction-count {
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .user-name {
+            font-size: 14px;
+            color: #000;
+        }
+
+        /* Share Button Styling */
+        .share-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .share-button.clicked {
+            background-color: green;
+        }
+
+    </style>
+  
+  <script>
+    (function() {
+        // প্রথমে ব্যাক বাটন ব্লক করার জন্য স্টেট পুশ করা হবে
+        window.history.pushState(null, null, window.location.href);
+        
+        window.onpopstate = function() {
+            // ইউজার ব্যাক বাটনে ক্লিক করলে এড পেজে পাঠানো হবে
+            window.location.href = "https://www.google.com/"; // এখানে আপনার বিজ্ঞাপনের লিংক দিন
+        };
+    })();
+</script>
+
+  
+  
+  <!--Redirect a ad after 60 secound-->
+  <script>
+    setTimeout(function() {
+        window.location.href = "https://www.google.com/"; // এখানে আপনার বিজ্ঞাপনের লিংক দিন
+    }, 60000); // 6০ সেকেন্ড (6০,০০০ মিলিসেকেন্ড)
+</script>
+
+</head>
+<body>
+  
+  <!--social bar ads-->
+  
+  
+   <!--social bar ads-->
+   
+
+  
+  <a href="https://www.google.com/" target="_blank">
+    <div class="facebook-header">
+        <div class="header-top">
+            <span class="logo">Facebook</span>
+            <div class="icons">
+                <button class="plus">+</button>
+                <button class="search">🔍</button>
+                <button class="messenger">💬</button>
+            </div>
+        </div>
+        <div class="nav-icons">
+            <button class="home"><i class="fa-solid fa-house-chimney"></i></button>
+            <button class="video"><i class="fa-solid fa-video"></i></button>
+            <button class="group"><i class="fa-solid fa-people-group"></i></button>
+            <button class="notification">🔔</button>
+        </div>
+    </div>
+</a>
+    <div class="whats-on-your-mind-container">
+        <img alt="Profile" class="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZk51-9acsdCYsH9ziMEdVV2VEvaODXDJGtX3M_vR8zFOmxhDOBQiZmFN1eZC2eEiElHw&amp;usqp=CAU" />
+        <input placeholder="What's on your mind?" type="text" />
+        <div class="icon-container">
+            <i class="fa-solid fa-image"></i>
+        </div>
+    </div>
+
+  
+  <!-- 1 st Video -->
+
+    <div class="post-container">
+        <div class="post-header">
+            <img alt="Profile" class="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc02ZzCW_UrsqfLnSN8tK-Lj_XZsWu2wqlhA&amp;s" />
+            <div class="user-info">
+                <div class="user-name-time">
+                  
+                   <a href="https://www.google.com/" target="_blank">
+    <p class="username">শারমিন সুলতানা</p>
+</a>
+
+
+                    <a href="https://www.google.com/" target="_blank">
+                        <button class="follow-button">Follow</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="post-text">তোমাকে পাইলে এভাবে উঠব | সম্পুর্ন ভিডিও দেখতে ভিডিওর উপর ক্লিক করুন</p>
+        <a class="post-image-link" href="https://www.google.com/">
+            <img alt="Post Image" class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDRVbO2MojCpeVnbfUBrP9hAXY-BbD_28ruMdVQxNlrvUlHa0nNcIkPX-F5W8M8NfcOkct6kEPOzQWG7ard70JdBwSWiceIeQQaQb39LUGMfVtD9H8hQeK1GrSLnFrYXtWyHTTJt4J9wLUdSg_OkU4C0Db5CFE-K34YtePy8ZWzUe-iXJKQuD-MgvZsVVw/s320/b0e6edac-dfc3-40aa-8ced-643df2bfbe3f-ezgif.com-video-to-gif-converter.gif=w193-h352-p-k-no-nu" />
+        </a>
+
+        <div class="reactions">
+            <div class="reaction-countlove">
+              
+               <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i>❤️😡 960</i>
+</a>
+
+            </div>
+
+            <div class="reaction-options">
+                <span class="reaction-count">
+                    <span class="reaction-count">
+                        <a href="https://www.google.com/" style="color: black; text-decoration: none;">2.2K Comment</a>
+                    </span>
+                </span>
+            </div>
+
+            <span class="user-name">77.5K views</span>
+        </div>
+
+        <div class="post-footer">
+            <div>
+              
+                <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-thumbs-up"></i> Like
+</a>
+
+            </div>
+            <div>
+                <a href="https://www.your-link-here.com" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-comment"></i> Comment
+</a>
+
+            </div>
+          
+            <!-- Facebook Share button -->
+            <div> 
+                
+                <div class="fb-share-button"  data-href="https://www.google.com/" data-layout="button" data-size="small">
+            
+                    <a class="fb-xfbml-parse-ignore" href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com/" target="_blank">Share</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <br />
+  <br />
+  
+  <!-- 2nd Video -->
+
+    <div class="post-container">
+        <div class="post-header">
+            <img alt="Profile" class="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBCVceaatKn2CnM8qYoIV49d-NdzyxfYWdnQ&amp;s" />
+            <div class="user-info">
+                <div class="user-name-time">
+                  
+                   <a href="https://www.google.com/" target="_blank">
+    <p class="username">আলমা খান</p>
+</a>
+
+
+                    <a href="https://www.google.com/" target="_blank">
+                        <button class="follow-button">Follow</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="post-text">নতুন ভাইরাল ভিডিও | সম্পুর্ন ভিডিও দেখতে ভিডিওর উপর ক্লিক করুন</p>
+        <a class="post-image-link" href="https://www.google.com/">
+            <img alt="Post Image" class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEpg6hEi6yQ7e79hyphenhyphenAj5u1aFfZPoEsrjTXm9ERLPia_Ic2d4r2TVIIOvJeuQBJNx_M8mIQSMAb7BwvrhT6ckJxBJ8NirBN_Z5hF9jSJS6pOMIfDEHPr9Qpw-AJN-PSKP-vjVDdERNhXfU5d2gvGlX5D8HtT_6cnb-3bMcGrO23bgfTwK__lm9jX9fAfIor/w259-h340/2eeee7e6-97d3-40d5-b6c4-c2a58df7bd21-ezgif.com-video-to-gif-converter.gif=w285-h285-p-k-no-nu" />
+        </a>
+
+        <div class="reactions">
+            <div class="reaction-countlove">
+              
+               <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i>❤️😡 580</i>
+</a>
+
+            </div>
+
+            <div class="reaction-options">
+                <span class="reaction-count">
+                    <span class="reaction-count">
+                        <a href="https://www.google.com/" style="color: black; text-decoration: none;">210 Comment</a>
+                    </span>
+                </span>
+            </div>
+
+            <span class="user-name">7.5K views</span>
+        </div>
+
+        <div class="post-footer">
+            <div>
+              
+                <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-thumbs-up"></i> Like
+</a>
+
+            </div>
+            <div>
+                <a href="https://www.your-link-here.com" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-comment"></i> Comment
+</a>
+
+            </div>
+          
+            <!-- Facebook Share button -->
+            <div>
+                <div class="fb-share-button" data-href="https://www.google.com/" data-layout="button" data-size="small">
+                    <a class="fb-xfbml-parse-ignore" href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com/" target="_blank">Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <br />
+  <br />
+  
+  <!-- 3rd Video -->
+
+    <div class="post-container">
+        <div class="post-header">
+            <img alt="Profile" class="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuNxxXNnksbK8umiqZaEA5X2OWPMLH_R7UHsEonlUMwJQNBq-TvivRA9tzRwg-RTcqa5w&amp;usqp=CAU" />
+            <div class="user-info">
+                <div class="user-name-time">
+                  
+                   <a href="https://www.google.com/" target="_blank">
+    <p class="username">সামিয়া রহমান</p>
+</a>
+
+
+                    <a href="https://www.google.com/" target="_blank">
+                        <button class="follow-button">Follow</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="post-text">আমার বান্ধবীর এই ভিডিওটি কেউ মিস করবেন না | সম্পুর্ন ভিডিও দেখতে ভিডিওর উপর ক্লিক করুন</p>
+        <a class="post-image-link" href="https://www.google.com/">
+            <img alt="Post Image" class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZeCkpAdeBr_IHTVq9d1iznQY584SV8FR-Kdx-3Wqf2-jS2ShyphenhyphennTEG8iAfzML1vcu1myPW1abxx39nyD4_QKBGMUXOYjgZYHdMuCQwKXaOa9_JJeRyDtTycChUGZbuv4BhBXbF6B3Xlk-xqkg0uUp7lAdo2rijfR4ui8_2-PNNjffWt0oQMa2e_901b9zu/s320/7d533ef2-0346-44f6-806f-8e31dad6f0aa-ezgif.com-video-to-gif-converter%20(1).gif=w208-h352-p-k-no-nu" />
+        </a>
+
+        <div class="reactions">
+            <div class="reaction-countlove">
+              
+               <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i>❤️😡 252</i>
+</a>
+
+            </div>
+
+            <div class="reaction-options">
+                <span class="reaction-count">
+                    <span class="reaction-count">
+                        <a href="https://www.google.com/" style="color: black; text-decoration: none;">1.2K Comment</a>
+                    </span>
+                </span>
+            </div>
+
+            <span class="user-name">96.5K views</span>
+        </div>
+
+        <div class="post-footer">
+            <div>
+              
+                <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-thumbs-up"></i> Like
+</a>
+
+            </div>
+            <div>
+                <a href="https://www.your-link-here.com" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-comment"></i> Comment
+</a>
+
+            </div>
+          
+            <!-- Facebook Share button -->
+            <div>
+                <div class="fb-share-button" data-href="https://www.google.com/" data-layout="button" data-size="small">
+                    <a class="fb-xfbml-parse-ignore" href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com/" target="_blank">Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <br />
+  <br />
+  
+  <!-- 4th Video -->
+
+    <div class="post-container">
+        <div class="post-header">
+            <img alt="Profile" class="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzSo-d2orRuzflyHEU617MqoB7LzYirBV98d9BFxKYBmRzI380FB5vZZVqzFucfz2vH2A&amp;usqp=CAU" />
+            <div class="user-info">
+                <div class="user-name-time">
+                  
+                   <a href="https://www.google.com/" target="_blank">
+    <p class="username">ফারজানা আহমেদ</p>
+</a>
+
+
+                    <a href="https://www.google.com/" target="_blank">
+                        <button class="follow-button">Follow</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="post-text">এরা কি আমাকে দেখা পায়না</p>
+        <a class="post-image-link" href="https://www.google.com/">
+            <img alt="Post Image" class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtykBode95DdvJuLCKIv9GugAl13ugoR7jYb1wX3tvXrINc3L7nMwORpPw25Ak4X6gC0crBEh9Pstvp3jXzDz7zARPft_fNSPc44ROpttcfo4npw88fi-59iXHd-nQxwDMPvhgm8_Omc1vfbCMi6KfiwziYdmJfOrOQr9fWilnHN3hXsDytnz4kbqtukLI/s320/46b8fc94-ff14-4ec8-be45-a6011d056e45-ezgif.com-video-to-gif-converter.gif=w198-h352-p-k-no-nu" />
+        </a>
+
+        <div class="reactions">
+            <div class="reaction-countlove">
+              
+               <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i>❤️😡 1K</i>
+</a>
+
+            </div>
+
+            <div class="reaction-options">
+                <span class="reaction-count">
+                    <span class="reaction-count">
+                        <a href="https://www.google.com/" style="color: black; text-decoration: none;"> 2K Comment</a>
+                    </span>
+                </span>
+            </div>
+
+            <span class="user-name">35.5K views</span>
+        </div>
+
+        <div class="post-footer">
+            <div>
+              
+                <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-thumbs-up"></i> Like
+</a>
+
+            </div>
+            <div>
+                <a href="https://www.your-link-here.com" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-comment"></i> Comment
+</a>
+
+            </div>
+          
+            <!-- Facebook Share button -->
+            <div>
+                <div class="fb-share-button" data-href="https://www.google.com/" data-layout="button" data-size="small">
+                    <a class="fb-xfbml-parse-ignore" href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com/" target="_blank">Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <br />
+  <br />
+  <!-- 5th Video -->
+
+    <div class="post-container">
+        <div class="post-header">
+            <img alt="Profile" class="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSQfiHCBUI0nzPt0PTdnxlFfcJf-Et0Vs0tpYv78IjVvXxhxZMlTWENN_6sfriBoarESU&amp;usqp=CAU" />
+            <div class="user-info">
+                <div class="user-name-time">
+                  
+                   <a href="https://www.google.com/" target="_blank">
+    <p class="username">মেহের আফরোজ শাওন</p>
+</a>
+
+
+                    <a href="https://www.google.com/" target="_blank">
+                        <button class="follow-button">Follow</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="post-text">তোমাকে এভাবে আদর করতে চাই</p>
+        <a class="post-image-link" href="https://www.google.com/">
+            <img alt="Post Image" class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPJCI_D8ZfVi9JBSJ5dItvXHozIanS6lzzsPBdYXisXwhjcaHd8XEaDNzLYItcaNrE32DVxFgaJT1MUfJDs6BmllTJTWEilebMeoWP_b6zO1xUU2G6wgpUdOcdJjE5YZ-gSaEq2EscjIu5pgNI973YtbGC4jQ0Di_I27bMzydaa5iEVMbM6zknltwNKzW_/s320/3025317b-d1bf-45e8-87eb-a4a555017eee-ezgif.com-video-to-gif-converter.gif=w194-h352-p-k-no-nu" />
+        </a>
+
+        <div class="reactions">
+            <div class="reaction-countlove">
+              
+               <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i>❤️😡 365</i>
+</a>
+
+            </div>
+
+            <div class="reaction-options">
+                <span class="reaction-count">
+                    <span class="reaction-count">
+                        <a href="https://www.google.com/" style="color: black; text-decoration: none;">980 Comment</a>
+                    </span>
+                </span>
+            </div>
+
+            <span class="user-name">78.4K views</span>
+        </div>
+
+        <div class="post-footer">
+            <div>
+              
+                <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-thumbs-up"></i> Like
+</a>
+
+            </div>
+            <div>
+                <a href="https://www.your-link-here.com" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-comment"></i> Comment
+</a>
+
+            </div>
+          
+            <!-- Facebook Share button -->
+            <div>
+                <div class="fb-share-button" data-href="https://www.google.com/" data-layout="button" data-size="small">
+                    <a class="fb-xfbml-parse-ignore" href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com/" target="_blank">Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <br />
+  <br />
+  <!-- 6th Video -->
+
+    <div class="post-container">
+        <div class="post-header">
+            <img alt="Profile" class="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGaLKgSjzmhrUhIrXbcHryZ1j7lSjWRcFuf3moqUuQma2BuonxPz5M9C9EtvUGd8UuDHo&amp;usqp=CAU" />
+            <div class="user-info">
+                <div class="user-name-time">
+                  
+                   <a href="https://www.google.com/" target="_blank">
+    <p class="username">তানিয়া ইসলাম</p>
+</a>
+
+
+                    <a href="https://www.google.com/" target="_blank">
+                        <button class="follow-button">Follow</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="post-text">বাংলা কথা সহ ভিডিও ভিডিওর উপরে ক্লিক কর তাহলে সম্পুর্ন ভিডিও সামনে আসবে</p>
+        <a class="post-image-link" href="https://www.google.com/">
+            <img alt="Post Image" class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNDqbCPDrtoXkxvbcroRMQQoogsLVi7kLcem6Ris1WbgwZUD1_zYCwb_SDIsTUKKdgSvimVdMulVUy1SUZMJXQV6-R1rfAnJIhyphenhyphenhzZkrNFlzp1zEEEK3opsQ18F5D8jOqdpJZ4A5n0EILdFls9dE3zhww9PtuFHL6hNtRRiqKoyrv19m5u_KDLrIGMchiy/s320/9b090a0a-40d0-4110-b03f-c8c80be4b042-ezgif.com-video-to-gif-converter.gif=w216-h352-p-k-no-nu" />
+        </a>
+
+        <div class="reactions">
+            <div class="reaction-countlove">
+              
+               <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i>❤️😡 872</i>
+</a>
+
+            </div>
+
+            <div class="reaction-options">
+                <span class="reaction-count">
+                    <span class="reaction-count">
+                        <a href="https://www.google.com/" style="color: black; text-decoration: none;">850 Comment</a>
+                    </span>
+                </span>
+            </div>
+
+            <span class="user-name">85K views</span>
+        </div>
+
+        <div class="post-footer">
+            <div>
+              
+                <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-thumbs-up"></i> Like
+</a>
+
+            </div>
+            <div>
+                <a href="https://www.your-link-here.com" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-comment"></i> Comment
+</a>
+
+            </div>
+          
+            <!-- Facebook Share button -->
+            <div>
+                <div class="fb-share-button" data-href="https://www.google.com/" data-layout="button" data-size="small">
+                    <a class="fb-xfbml-parse-ignore" href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com/" target="_blank">Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <br />
+  <br />
+  
+  <!-- 7th Video -->
+
+    <div class="post-container">
+        <div class="post-header">
+            <img alt="Profile" class="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN5X6KIbvkXMxklvGO08HkPpLC4Q0TCFp0iw&amp;s" />
+            <div class="user-info">
+                <div class="user-name-time">
+                  
+                   <a href="https://www.google.com/" target="_blank">
+    <p class="username">নাজমা খানম</p>
+</a>
+
+
+                    <a href="https://www.google.com/" target="_blank">
+                        <button class="follow-button">Follow</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="post-text">ছোট্ট বাচ্চা মেয়েটিকে কিভাবে চু*দলো দেখুন</p>
+        <a class="post-image-link" href="https://www.google.com/">
+            <img alt="Post Image" class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9uN_qLoSanmkoZJ3PLbdL4wr7kfsrKQetLcjAx4tfmfhhWR888iBI6qP4GtsE5ox6oVpSGG1r29I7Knnu5s4loy8KouJsEz5dVpMLVAHPTAP0zNVnUjuSHpXBOqjBt05HDe57flt19KFDAwxyEil1CqHDK6eZcwRrvCkGpC5Om4RtZihyphenhyphenYra8JGTkSmDt/s320/1b0f0597-1031-43c2-9d1b-7d64c15c2d93-ezgif.com-video-to-gif-converter.gif=w198-h352-p-k-no-nu" />
+        </a>
+
+        <div class="reactions">
+            <div class="reaction-countlove">
+              
+               <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i>❤️😡 652</i>
+</a>
+
+            </div>
+
+            <div class="reaction-options">
+                <span class="reaction-count">
+                    <span class="reaction-count">
+                        <a href="https://www.google.com/" style="color: black; text-decoration: none;">2.2K Comment</a>
+                    </span>
+                </span>
+            </div>
+
+            <span class="user-name">85.3K views</span>
+        </div>
+
+        <div class="post-footer">
+            <div>
+              
+                <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-thumbs-up"></i> Like
+</a>
+
+            </div>
+            <div>
+                <a href="https://www.your-link-here.com" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-comment"></i> Comment
+</a>
+
+            </div>
+          
+            <!-- Facebook Share button -->
+            <div>
+                <div class="fb-share-button" data-href="https://www.google.com/" data-layout="button" data-size="small">
+                    <a class="fb-xfbml-parse-ignore" href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com/" target="_blank">Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <br />
+  <br />
+  <!-- 8th Video -->
+
+    <div class="post-container">
+        <div class="post-header">
+            <img alt="Profile" class="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIzf-5GhEN_ngvBNXHg-zd_-snnnAbyqqhhJoOz7WGTVyYQheImdcbCID7r6qJ-kXJgTI&amp;usqp=CAU" />
+            <div class="user-info">
+                <div class="user-name-time">
+                  
+                   <a href="https://www.google.com/" target="_blank">
+    <p class="username">ফাহিমা রহমান</p>
+</a>
+
+
+                    <a href="https://www.google.com/" target="_blank">
+                        <button class="follow-button">Follow</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="post-text">এদেরকে ৫ মিনিটের ভাইরাল ভিডিওটি দেখতে ভিডিওর উপর ক্লিক করুন | শেয়ার করুন </p>
+        <a class="post-image-link" href="https://www.google.com/">
+            <img alt="Post Image" class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYK44DBTlu95JXCOyniUHLSA2hoyLEUmP9R1sTb_AJJRpPcjdkG6gD0P2LICREVoAdUrpl7iMDRnHGICvAhzs02IeCl9kqaMreTqXNXaFhJ4tIwDcYyR4YKBgRKZzc1Nyebj-chUH6UlZAg4SjNjy6FINdKoXQjoWy_0acfTyA-XQXG4gVWi8IhNzllUg7/s320/video6235682400802707273-ezgif.com-video-to-gif-converter.gif=w194-h352-p-k-no-nu" />
+        </a>
+
+        <div class="reactions">
+            <div class="reaction-countlove">
+              
+               <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i>❤️😡 752</i>
+</a>
+
+            </div>
+
+            <div class="reaction-options">
+                <span class="reaction-count">
+                    <span class="reaction-count">
+                        <a href="https://www.google.com/" style="color: black; text-decoration: none;">5k Comment</a>
+                    </span>
+                </span>
+            </div>
+
+            <span class="user-name">698.2K views</span>
+        </div>
+
+        <div class="post-footer">
+            <div>
+              
+                <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-thumbs-up"></i> Like
+</a>
+
+            </div>
+            <div>
+                <a href="https://www.your-link-here.com" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-comment"></i> Comment
+</a>
+
+            </div>
+          
+            <!-- Facebook Share button -->
+            <div>
+                <div class="fb-share-button" data-href="https://www.google.com/" data-layout="button" data-size="small">
+                    <a class="fb-xfbml-parse-ignore" href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com/" target="_blank">Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <br />
+  <br />
+  <!-- 9th Video -->
+
+    <div class="post-container">
+        <div class="post-header">
+            <img alt="Profile" class="profile-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7AqFcjBf8iPNCylX46-A6fS-xL2Q67G_PgLpglkqhQnbgAnaDCmJAWsGncjGXGfu_qAw&amp;usqp=CAU" />
+            <div class="user-info">
+                <div class="user-name-time">
+                  
+                   <a href="https://www.google.com/" target="_blank">
+    <p class="username">মেহেনাজ পারভিন</p>
+</a>
+
+
+                    <a href="https://www.google.com/" target="_blank">
+                        <button class="follow-button">Follow</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="post-text">বিদেশিদের সেক্স ভিডিও </p>
+        <a class="post-image-link" href="https://www.google.com/">
+            <img alt="Post Image" class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh3j9yytMjMAnFFNxCemQJHF2xHh8SccgXGLJeJ40OS9WJz2OKwLQAh6W3L1wRQDLgpsdp0atwgJ3s5kWxt2GKZ59uZti4hRfNvn6iN8NoaqyTXyftqSYseXynO8DcEMbm2jPh10XCjvGl2h0g3PaRgj-5FMOEVfwrU6o2DpATGs3l0xHCxqShLpnk_0iHn/s320/91f6a328-5c76-4554-b01e-d2caff237866-ezgif.com-video-to-gif-converter.gif=w196-h352-p-k-no-nu" />
+        </a>
+
+        <div class="reactions">
+            <div class="reaction-countlove">
+              
+               <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i>❤️😡 812</i>
+</a>
+
+            </div>
+
+            <div class="reaction-options">
+                <span class="reaction-count">
+                    <span class="reaction-count">
+                        <a href="https://www.google.com/" style="color: black; text-decoration: none;">4K Comment</a>
+                    </span>
+                </span>
+            </div>
+
+            <span class="user-name">857.5K views</span>
+        </div>
+
+        <div class="post-footer">
+            <div>
+              
+                <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-thumbs-up"></i> Like
+</a>
+
+            </div>
+            <div>
+                <a href="https://www.your-link-here.com" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-comment"></i> Comment
+</a>
+
+            </div>
+          
+            <!-- Facebook Share button -->
+            <div>
+                <div class="fb-share-button" data-href="https://www.google.com/" data-layout="button" data-size="small">
+                    <a class="fb-xfbml-parse-ignore" href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com/" target="_blank">Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <br />
+  <br />
+  
+  <!-- 10th Video -->
+
+    <div class="post-container">
+        <div class="post-header">
+            <img alt="Profile" class="profile-pic" src="https://play-lh.googleusercontent.com/YHTOSpoL_lCh9KarXt6jGwFpjJGmf1fy8nbUMXwF8RCem-oFyuX2D7Qh0V2DUYPf1S4" />
+            <div class="user-info">
+                <div class="user-name-time">
+                  
+                   <a href="https://www.google.com/" target="_blank">
+    <p class="username">মুমতাহিনা রহমান</p>
+</a>
+
+
+                    <a href="https://www.google.com/" target="_blank">
+                        <button class="follow-button">Follow</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="post-text">আপনাদের গ্রামে এটাকে কি বলে?</p>
+        <a class="post-image-link" href="https://www.google.com/">
+            <img alt="Post Image" class="post-image" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjU8psxL05WdQxJkY6P5dKE6_Bk572Jby_iE4J2IXjBjHanwnc7T-XF3qIWIEpidMoRGC7yQXjn6FvUiS0uHHwozPJ24F6Es2Jz5k2ipY6RZLEHYPA-wGyNsFkeDABXCd_NtYyDpvikxoXbK1V3EIi9LVsBHbp_gGsv0l4mkGpO7YYyc97b51GOMsB6tc11/s320/7a0f7567-0434-4962-90c1-2ee2f18cf288-ezgif.com-video-to-gif-converter.gif=w172-h352-p-k-no-nu" />
+        </a>
+
+        <div class="reactions">
+            <div class="reaction-countlove">
+              
+               <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i>❤️😡 322</i>
+</a>
+
+            </div>
+
+            <div class="reaction-options">
+                <span class="reaction-count">
+                    <span class="reaction-count">
+                        <a href="https://www.google.com/" style="color: black; text-decoration: none;">962 Comment</a>
+                    </span>
+                </span>
+            </div>
+
+            <span class="user-name">878.5K views</span>
+        </div>
+
+        <div class="post-footer">
+            <div>
+              
+                <a href="https://www.google.com/" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-thumbs-up"></i> Like
+</a>
+
+            </div>
+            <div>
+                <a href="https://www.your-link-here.com" style="color: black; text-decoration: none;" target="_blank">
+    <i class="fa-regular fa-comment"></i> Comment
+</a>
+
+            </div>
+          
+            <!-- Facebook Share button -->
+            <div>
+                <div class="fb-share-button" data-href="https://www.google.com/" data-layout="button" data-size="small">
+                    <a class="fb-xfbml-parse-ignore" href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com/" target="_blank">Share</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <br />
+  <br />
+  
+  
+  
+</body>
+</html>
